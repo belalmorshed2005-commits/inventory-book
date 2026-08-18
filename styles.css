@@ -1,3 +1,10 @@
+body,table{
+    font-family:' Inter',sans-serif;
+}
+th{
+    font-weight: 700;
+}
+
 table,th,td{
     border: 1px solid black;
     border-collapse: collapse;
@@ -18,11 +25,58 @@ background-image: linear-gradient(to right,#2196f3,#9c27b0);
 span{
     display: inline-block;
 }
- tr.read span[class="Status"]{
+ tr.read span[class="status"]{
 border:1px solid black;
+width: auto;
+height: auto;
 background-image: linear-gradient(to right,#11998e,#38ef7d) !important;
+transition: all 0.3s ease;
+
 }
 tr.in-progress span[class="Status"]{
 border:1px solid black;
 background-image: linear-gradient(to right,#11998e,#38ef7d) !important;
+transition: all 0.3s ease;
+
+}
+span[class="status"],span[class~="rate"]{
+    height:4px;
+    width:4px;
+    padding: 5px;
+}
+span[class^="rate"]>span:not(th:nth-child(5) span,td:nth-child(5) span){
+    border:1px solid black;
+    border-radius: 10px;
+    margin:5px;
+    height:auto;
+    width: auto;
+    background-color: beige;
+}
+span[class*="one"]>:first-of-type{
+background-image: linear-gradient(to right,#11998e,#38ef7d) !important;    
+}
+span[class*="two"]>:first-of-type{
+background-image: linear-gradient(to right,#11998e,#38ef7d) !important;    
+transition: all 0.3s ease;
+}
+span[class*="three"]>:first-of-type{
+background-image: linear-gradient(to right,#11998e,#38ef7d) !important;    
+}
+th:nth-child(5) span,td:nth-child(5) span{
+    background-color: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    display: inline;
+    display: flex;
+    text-align: left;
+}
+span[class*="two"]>:first-of-type:hover{
+    transform: translateY(-5px);
+}
+tr.in-progress span[class="Status"]:hover{
+    transform: translateY(-5px);
+}
+tr.read span[class="status"]:hover{
+transform: translateY(-5px);
 }
