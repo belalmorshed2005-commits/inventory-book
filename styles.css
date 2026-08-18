@@ -1,0 +1,28 @@
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th,td{
+    padding:10px;
+    text-align: left;
+}
+.read{
+    background-image: linear-gradient(to right,#2196f3,#9c27b0);
+}
+.to-read{
+background-image: linear-gradient(to right,#2196f3,#9c27b0);
+}
+.in-progress{
+background-image: linear-gradient(to right,#2196f3,#9c27b0);
+}
+span{
+    display: inline-block;
+}
+ tr.read span[class="Status"]{
+border:1px solid black;
+background-image: linear-gradient(to right,#11998e,#38ef7d) !important;
+}
+tr.in-progress span[class="Status"]{
+border:1px solid black;
+background-image: linear-gradient(to right,#11998e,#38ef7d) !important;
+}
